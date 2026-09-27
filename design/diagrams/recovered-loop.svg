@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="680" viewBox="0 0 1400 680" role="img" aria-labelledby="t d">
+<title id="t">Recovered interaction loop — MIDI Piano</title>
+<desc id="d">Mouse and MIDI both end in activate(). Release changes colour only; the sound lives 8 s regardless. References: M-02 M-03 M-04 M-05 S-01 S-02 F-05.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e6e6e6"/></marker><marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0a040"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e06c5f"/></marker></defs>
+<rect width="1400" height="680" fill="#202225"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<text x="36" y="50" font-size="28" font-weight="700" fill="#e6e6e6">Recovered interaction loop — MIDI Piano</text>
+<text x="36" y="78" font-size="15" fill="#9aa3ad">Mouse and MIDI both end in activate(). Release changes colour only; the sound lives 8 s regardless.</text>
+<rect x="36" y="640" width="30" height="18" rx="4" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="76" y="654" font-size="14" fill="#9aa3ad">observed in code / logs (solid)</text>
+<rect x="366" y="640" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e0a040" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="406" y="654" font-size="14" fill="#9aa3ad">inferred or proposed (dashed)</text>
+<rect x="696" y="640" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="736" y="654" font-size="14" fill="#9aa3ad">missing / unverified (dotted)</text>
+<text x="1364" y="654" font-size="14" fill="#9aa3ad" text-anchor="end">IDs: M-02 M-03 M-04 M-05 S-01 S-02 F-05</text>
+<path d="M310,191 L420,216" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<path d="M310,299 L420,274" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<path d="M670,216 L780,191" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<path d="M1050,160 L1120,160" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="1085" y="152" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">timer</text>
+<path d="M915,200 L915,300" fill="none" stroke="#e06c5f" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#am)"/>
+<path d="M670,487 L780,488" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<path d="M175,450 L175,370" fill="none" stroke="#e06c5f" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#am)"/>
+<text x="215" y="410" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">untested</text>
+<path d="M1050,340 L1380,340 L1380,92 L175,92 L175,120" fill="none" stroke="#e0a040" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#ad)"/>
+<text x="780" y="86" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">next note</text>
+<rect x="40" y="120" width="270" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="175" y="158" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Mouse press on a key</text>
+<text x="175" y="176" font-size="13" fill="#9aa3ad" text-anchor="middle">M-02</text>
+<rect x="40" y="290" width="270" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="175" y="328" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">MIDI note-on, vel &gt; 0</text>
+<text x="175" y="346" font-size="13" fill="#9aa3ad" text-anchor="middle">M-03 · local filter</text>
+<rect x="420" y="200" width="250" height="90" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="545" y="242" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">activate()</text>
+<text x="545" y="262" font-size="13" fill="#9aa3ad" text-anchor="middle">tint key · start ColorTimer</text>
+<rect x="780" y="120" width="270" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="915" y="158" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">New voice: A440.wav</text>
+<text x="915" y="176" font-size="13" fill="#9aa3ad" text-anchor="middle">M-04 · pitch 2^((p−69)/12)</text>
+<rect x="1120" y="120" width="240" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="1240" y="158" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Voice freed at 8 s</text>
+<text x="1240" y="176" font-size="13" fill="#9aa3ad" text-anchor="middle">low notes may truncate</text>
+<rect x="780" y="300" width="270" height="80" rx="8" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="915" y="338" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Player hears the note</text>
+<text x="915" y="356" font-size="13" fill="#9aa3ad" text-anchor="middle">F-05 · never heard</text>
+<rect x="420" y="440" width="250" height="90" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="545" y="473" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Note-off / vel 0 /</text>
+<text x="545" y="492" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">ColorTimer</text>
+<text x="545" y="511" font-size="13" fill="#9aa3ad" text-anchor="middle">M-05</text>
+<rect x="780" y="450" width="270" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="915" y="488" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">deactivate()</text>
+<text x="915" y="506" font-size="13" fill="#9aa3ad" text-anchor="middle">colour only · sound keeps ringing</text>
+<rect x="40" y="450" width="270" height="80" rx="8" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="175" y="488" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Physical MIDI keyboard</text>
+<text x="175" y="506" font-size="13" fill="#9aa3ad" text-anchor="middle">none connected · Q-06</text>
+</g></svg>

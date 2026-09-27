@@ -1,0 +1,46 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+InputEventMIDI: Note On: channel=0, pitch=69, velocity=100
+Channel: 0
+Message: 9
+Pitch: 69
+Velocity: 100
+Instrument: 0
+Pressure: 0
+Controller number: 0
+Controller value: 0
+PASS note-on activates
+PASS aftertouch does not release key
+InputEventMIDI: Note On: channel=0, pitch=69, velocity=0
+Channel: 0
+Message: 9
+Pitch: 69
+Velocity: 0
+Instrument: 0
+Pressure: 0
+Controller number: 0
+Controller value: 0
+PASS zero-velocity note-on releases highlight
+PASS zero velocity creates no voice
+InputEventMIDI: Note On: channel=0, pitch=69, velocity=100
+Channel: 0
+Message: 9
+Pitch: 69
+Velocity: 100
+Instrument: 0
+Pressure: 0
+Controller number: 0
+Controller value: 0
+InputEventMIDI: Note Off: channel=0, pitch=69, velocity=64
+Channel: 0
+Message: 8
+Pitch: 69
+Velocity: 64
+Instrument: 0
+Pressure: 0
+Controller number: 0
+Controller value: 0
+PASS note-off releases highlight
+PASS out-of-range pitches ignored
+PASS all created voices cleaned up
+RESULT 7 checks; 0 failures

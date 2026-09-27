@@ -1,0 +1,16 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DIAG MIDI inputs []
+PASS 88 keys
+PASS 52 white keys
+PASS A440 ratio1
+PASS A880 ratio2
+PASS A220 ratio0.5
+PASS mouse highlights 69
+PASS mouse starts audio node 69
+PASS mouse highlights 70
+PASS mouse starts audio node 70
+PASS timer restores color
+PASS audio node cleanup 69
+PASS audio node cleanup 70
+RESULT 12 checks; 0 failures

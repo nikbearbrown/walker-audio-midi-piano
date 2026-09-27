@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560" role="img" aria-labelledby="t d">
+<title id="t">Recovered state flow — MIDI Piano</title>
+<desc id="d">Per key: Idle and Lit. Per activation: an independent voice with a fixed 8 s life. The two are not linked. References: S-01 S-02 M-03 M-05.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e6e6e6"/></marker><marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0a040"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e06c5f"/></marker></defs>
+<rect width="1400" height="560" fill="#202225"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<text x="36" y="50" font-size="28" font-weight="700" fill="#e6e6e6">Recovered state flow — MIDI Piano</text>
+<text x="36" y="78" font-size="15" fill="#9aa3ad">Per key: Idle and Lit. Per activation: an independent voice with a fixed 8 s life. The two are not linked.</text>
+<rect x="36" y="520" width="30" height="18" rx="4" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="76" y="534" font-size="14" fill="#9aa3ad">observed in code / logs (solid)</text>
+<rect x="366" y="520" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e0a040" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="406" y="534" font-size="14" fill="#9aa3ad">inferred or proposed (dashed)</text>
+<rect x="696" y="520" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="736" y="534" font-size="14" fill="#9aa3ad">missing / unverified (dotted)</text>
+<text x="1364" y="534" font-size="14" fill="#9aa3ad" text-anchor="end">IDs: S-01 S-02 M-03 M-05</text>
+<rect x="30" y="100" width="640" height="280" rx="10" fill="none" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="42" y="122" font-size="14" font-weight="700" fill="#9aa3ad">Key (S-01)</text>
+<rect x="730" y="100" width="640" height="280" rx="10" fill="none" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="742" y="122" font-size="14" font-weight="700" fill="#9aa3ad">Voice, one per activation (S-02)</text>
+<path d="M290,201 L350,180 L410,201" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="350" y="172" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">activate()</text>
+<path d="M410,279 L350,300 L290,279" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="350" y="324" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">note-off · vel 0 · timer</text>
+<path d="M498,200 L470,150 L570,150 L542,200" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="570" y="144" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">activate() again: new voice</text>
+<path d="M1010,240 L1100,240" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="1055" y="232" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">8.0 s</text>
+<path d="M890,280 L890,420" fill="none" stroke="#e06c5f" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#am)"/>
+<text x="950" y="350" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">deactivate()?</text>
+<rect x="70" y="200" width="220" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="180" y="238" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Idle</text>
+<text x="180" y="256" font-size="13" fill="#9aa3ad" text-anchor="middle">start colour</text>
+<rect x="410" y="200" width="220" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="520" y="238" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Lit</text>
+<text x="520" y="256" font-size="13" fill="#9aa3ad" text-anchor="middle">yellow blend</text>
+<rect x="770" y="200" width="240" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="890" y="238" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Playing</text>
+<text x="890" y="256" font-size="13" fill="#9aa3ad" text-anchor="middle">AudioStreamPlayer child</text>
+<rect x="1100" y="200" width="220" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="1210" y="238" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Freed</text>
+<text x="1210" y="256" font-size="13" fill="#9aa3ad" text-anchor="middle">queue_free</text>
+<rect x="770" y="420" width="240" height="80" rx="8" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="890" y="458" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Stopped on release</text>
+<text x="890" y="476" font-size="13" fill="#9aa3ad" text-anchor="middle">no such path · Q-04</text>
+</g></svg>

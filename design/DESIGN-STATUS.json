@@ -1,0 +1,55 @@
+{
+  "game": "walker-audio-midi-piano",
+  "mode": "recovered",
+  "revision": 1,
+  "design_version": "0.1.0-recovered",
+  "date": "2026-09-27",
+  "project_kind": "tech demo (not a game); playable instrument",
+  "recovered_from": {
+    "path": "godot/",
+    "engine_detected": "Godot 4.7 features, GL Compatibility (project.godot); runs logged with 4.7.2",
+    "upstream": "Godot demo audio/midi_piano at a3b5c113 (Godot Engine contributors, MIT); local MIDI-filtering edit in piano.gd",
+    "pass": "/gdd reverse --path godot silent",
+    "git_history": "not read (no git run in this pass)"
+  },
+  "engine": {
+    "name": "godot",
+    "version": "4.7.2.stable (per local logs)",
+    "renderer": "gl_compatibility"
+  },
+  "gates": {
+    "vision": {
+      "signed_by": null,
+      "date": null,
+      "revision": null
+    },
+    "systems": {
+      "signed_by": null,
+      "date": null,
+      "revision": null
+    },
+    "world": {
+      "signed_by": null,
+      "date": null,
+      "revision": null
+    },
+    "scope": {
+      "signed_by": null,
+      "date": null,
+      "revision": null
+    }
+  },
+  "core_percentage": {
+    "core": 5,
+    "total": 6,
+    "percent": 83,
+    "over_limit": true,
+    "tags_inferred": true,
+    "decision": "Q-03 open"
+  },
+  "missing_items": 7,
+  "open_questions": 7,
+  "edu_track": false,
+  "human_playtests": 0,
+  "notes": "Silent recovered pass. gate \u2014 unsigned at time of writing. Nothing here is approved; a recovered GDD describes what exists. Gates are signed by humans only."
+}
